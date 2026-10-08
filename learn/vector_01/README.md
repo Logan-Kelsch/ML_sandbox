@@ -1,13 +1,13 @@
 # Vector 01: from gradients to neural-guided program search
 
 A visual, from-scratch learning sequence. Each numbered prompt corresponds to one
-notebook and a separate pull request. Lessons 00 and 01 are available.
+notebook and a separate pull request. Lessons 00–02 are available.
 
 | Prompt | Lesson | Build or investigate | Status |
 |---|---|---|---|
 | 00 | Computation and learning | Computation graphs, derivatives, backpropagation, NumPy neural network, optimization and generalization | [Available](00_computation_and_learning.ipynb) |
 | 01 | Equation learners (EQL) | Differentiable mathematical operators, sparsity and expression recovery | [Available](01_equation_learners.ipynb) |
-| 02 | Programs as hypotheses | Typed grammars, a small interpreter and inverse semantics | Planned |
+| 02 | Programs as hypotheses | Typed grammars, a small interpreter and inverse semantics | [Available](02_programs_as_hypotheses.ipynb) |
 | 03 | Choosing hypotheses | Bayesian reasoning, minimum description length and uncertainty | Planned |
 | 04 | Search and decisions | Bandits, UCT and Monte Carlo tree search | Planned |
 | 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | Planned |
@@ -35,7 +35,7 @@ Open the notebook in VS Code or an existing Jupyter installation, select this
 environment as the Python kernel, and run all cells from the top. JupyterLab users
 can install it separately with `python -m pip install jupyterlab`.
 
-Lessons 00 and 01 use NumPy and Matplotlib, generate their own data, and run without
+Lessons 00–02 use NumPy and Matplotlib, generate their own data, and run without
 TensorFlow, a GPU, network access, or a particular working directory. Executed
 plots are included for reading before running it yourself. Allow 60–90 minutes
 for the explanations and experiments.
@@ -78,3 +78,19 @@ exercises with solutions, identifiability and grammar limitations, and primary E
 references. Allow 75–120 minutes including exercises. No additional dependencies
 are required. To use the execution command above, change the filename to
 `01_equation_learners.ipynb`.
+
+## Lesson 02: programs as hypotheses
+
+Build a typed grid language, immutable program trees, a recursive interpreter,
+and a bottom-up enumerator. Nine figures show execution traces, syntax trees,
+ambiguous rules, an informative query, behavioral compression, and exact inverse
+constraints for a shift that loses information.
+
+The notebook keeps competing explanations, separates query labels from a held-out
+test, and completes a fixed program sketch by matching forward candidates against
+backward constraints. It exhaustively checks the inverse relation for four-cell
+rows and cross-checks sketch completion against direct execution. It includes
+seven exercises with solutions and primary reading. Allow 75–120 minutes.
+
+No additional dependencies are required. For the execution command above, use
+`02_programs_as_hypotheses.ipynb` as the filename.
