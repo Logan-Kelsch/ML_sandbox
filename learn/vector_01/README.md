@@ -1,7 +1,7 @@
 # Vector 01: from gradients to neural-guided program search
 
 A visual, from-scratch learning sequence. Each numbered prompt corresponds to one
-notebook and a separate pull request. Lessons 00–06 are available.
+notebook and a separate pull request. Lessons 00–07 are available.
 
 | Prompt | Lesson | Build or investigate | Status |
 |---|---|---|---|
@@ -12,7 +12,7 @@ notebook and a separate pull request. Lessons 00–06 are available.
 | 04 | Search and decisions | Bandits, UCB1, UCT and Monte Carlo tree search | [Available](04_search_and_decisions.ipynb) |
 | 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | [Available](05_neural_guided_program_search.ipynb) |
 | 06 | Structure and execution embeddings | Representing trees, graphs and program behavior | [Available](06_structure_execution_embeddings.ipynb) |
-| 07 | Learning reusable abstractions | Library learning and reusable program components | Planned |
+| 07 | Learning reusable abstractions | Library learning and reusable program components | [Available](07_learning_reusable_abstractions.ipynb) |
 | 08 | Adaptation and compositional generalization | New task adaptation, evaluation splits and failure analysis | Planned |
 
 The main project is neural-guided program search. A small equation learner comes
@@ -161,3 +161,23 @@ and an explicit bridge to Grammar-UCT's bundled genes and component paths.
 
 The notebook has no new dependencies and uses only original synthetic tasks.
 Run `06_structure_execution_embeddings.ipynb` with the README's Jupyter command.
+
+## Lesson 07: learning reusable abstractions
+
+Build a small, executable library learner from first principles. Match two-level
+unary AST contexts with an ARG placeholder, compress programs into macro calls,
+and expand calls exactly—including nested invocations—without mistaking them for
+cyclic macro definitions. Verify expansion against all 128 possible binary inputs
+in the toy width-seven Boolean domain.
+
+Score candidates by a transparent, library-inclusive description-length proxy:
+charge for macro definitions, all rewritten program nodes, and fixed entry
+overhead. Train a greedy library only on a synthetic solved-program corpus, then
+compare primitive-only breadth-first search with a macro-extended grammar on
+held-out compositions at equal complete-program execution counts. Plot both
+beneficial transfer and branching-factor negative transfer. Includes theoretical
+caveats, 10 exercises and solutions, and explicit mappings to Grammar-UCT's
+operations, source components and cached representations.
+
+Run `07_learning_reusable_abstractions.ipynb` using the README's normal Jupyter
+setup; no new dependencies are required.
