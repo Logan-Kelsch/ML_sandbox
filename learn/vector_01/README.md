@@ -1,14 +1,14 @@
 # Vector 01: from gradients to neural-guided program search
 
 A visual, from-scratch learning sequence. Each numbered prompt corresponds to one
-notebook and a separate pull request. Lessons 00–02 are available.
+notebook and a separate pull request. Lessons 00–03 are available.
 
 | Prompt | Lesson | Build or investigate | Status |
 |---|---|---|---|
 | 00 | Computation and learning | Computation graphs, derivatives, backpropagation, NumPy neural network, optimization and generalization | [Available](00_computation_and_learning.ipynb) |
 | 01 | Equation learners (EQL) | Differentiable mathematical operators, sparsity and expression recovery | [Available](01_equation_learners.ipynb) |
 | 02 | Programs as hypotheses | Typed grammars, a small interpreter and inverse semantics | [Available](02_programs_as_hypotheses.ipynb) |
-| 03 | Choosing hypotheses | Bayesian reasoning, minimum description length and uncertainty | Planned |
+| 03 | Choosing hypotheses | Bayesian reasoning, minimum description length and uncertainty | [Available](03_choosing_hypotheses.ipynb) |
 | 04 | Search and decisions | Bandits, UCT and Monte Carlo tree search | Planned |
 | 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | Planned |
 | 06 | Structure and execution embeddings | Representing trees, graphs and program behavior | Planned |
@@ -35,7 +35,7 @@ Open the notebook in VS Code or an existing Jupyter installation, select this
 environment as the Python kernel, and run all cells from the top. JupyterLab users
 can install it separately with `python -m pip install jupyterlab`.
 
-Lessons 00–02 use NumPy and Matplotlib, generate their own data, and run without
+Lessons 00–03 use NumPy and Matplotlib, generate their own data, and run without
 TensorFlow, a GPU, network access, or a particular working directory. Executed
 plots are included for reading before running it yourself. Allow 60–90 minutes
 for the explanations and experiments.
@@ -94,3 +94,17 @@ seven exercises with solutions and primary reading. Allow 75–120 minutes.
 
 No additional dependencies are required. For the execution command above, use
 `02_programs_as_hypotheses.ipynb` as the filename.
+
+## Lesson 03: choosing hypotheses
+
+Use exact inference over five small programs to connect Bayesian updates, noisy
+likelihoods, prefix-free model codes, and minimum description length. Ten figures
+show posterior changes, prior sensitivity, model-averaged predictions, uncertainty
+decomposition, informative queries, and confident failure from missing hypotheses.
+
+The notebook verifies direct versus log-space inference, code-length/MAP rankings,
+and two equivalent information-gain calculations. A 4,000-task simulation checks
+probability calibration under a matched synthetic generator. It includes eight
+exercises with solutions and emphasizes the limits of inference over a restricted
+candidate set. Allow 75–120 minutes; no additional dependencies are required.
+Use `03_choosing_hypotheses.ipynb` in the execution command above.
