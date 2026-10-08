@@ -1,7 +1,7 @@
 # Vector 01: from gradients to neural-guided program search
 
 A visual, from-scratch learning sequence. Each numbered prompt corresponds to one
-notebook and a separate pull request. Lessons 00–05 are available.
+notebook and a separate pull request. Lessons 00–06 are available.
 
 | Prompt | Lesson | Build or investigate | Status |
 |---|---|---|---|
@@ -11,7 +11,7 @@ notebook and a separate pull request. Lessons 00–05 are available.
 | 03 | Choosing hypotheses | Bayesian reasoning, minimum description length and uncertainty | [Available](03_choosing_hypotheses.ipynb) |
 | 04 | Search and decisions | Bandits, UCB1, UCT and Monte Carlo tree search | [Available](04_search_and_decisions.ipynb) |
 | 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | [Available](05_neural_guided_program_search.ipynb) |
-| 06 | Structure and execution embeddings | Representing trees, graphs and program behavior | Planned |
+| 06 | Structure and execution embeddings | Representing trees, graphs and program behavior | [Available](06_structure_execution_embeddings.ipynb) |
 | 07 | Learning reusable abstractions | Library learning and reusable program components | Planned |
 | 08 | Adaptation and compositional generalization | New task adaptation, evaluation splits and failure analysis | Planned |
 
@@ -141,3 +141,23 @@ The notebook includes 10 exercises with worked solutions, a direct mapping to
 Grammar-UCT's operation/source decisions, and a bridge to lesson 06 embeddings.
 No new dependencies. Use `05_neural_guided_program_search.ipynb` in the README's
 notebook execution example.
+
+## Lesson 06: structure and execution embeddings
+
+Construct a self-contained AST language for seven-cell Boolean grids, visualize
+operator trees, and implement their exact typed semantics. Compare bag-of-operators
+counts, untrained recursive structural vectors, execution signatures from chosen
+probes, and PCA compression. Use exhaustive evaluation over all 128 Boolean
+inputs as a toy-domain semantic oracle, showing both true equivalences and
+collisions induced by inadequate probe sets.
+
+Generate diverse bounded ASTs, split programs by complete semantic family, and
+train a NumPy neural execution emulator on structural-position features plus
+input grids. Gradient-check its supervised BCE objective and evaluate separately
+on unseen program families and unseen input grids. Inspect exact-grid vs cell
+accuracy, learned pooled hidden vectors, retrieval disagreement, and a cached
+shared-subtree execution DAG. End with exercises, solutions, research sources,
+and an explicit bridge to Grammar-UCT's bundled genes and component paths.
+
+The notebook has no new dependencies and uses only original synthetic tasks.
+Run `06_structure_execution_embeddings.ipynb` with the README's Jupyter command.
