@@ -1,7 +1,7 @@
 # Vector 01: from gradients to neural-guided program search
 
 A visual, from-scratch learning sequence. Each numbered prompt corresponds to one
-notebook and a separate pull request. Lessons 00–04 are available.
+notebook and a separate pull request. Lessons 00–05 are available.
 
 | Prompt | Lesson | Build or investigate | Status |
 |---|---|---|---|
@@ -10,7 +10,7 @@ notebook and a separate pull request. Lessons 00–04 are available.
 | 02 | Programs as hypotheses | Typed grammars, a small interpreter and inverse semantics | [Available](02_programs_as_hypotheses.ipynb) |
 | 03 | Choosing hypotheses | Bayesian reasoning, minimum description length and uncertainty | [Available](03_choosing_hypotheses.ipynb) |
 | 04 | Search and decisions | Bandits, UCB1, UCT and Monte Carlo tree search | [Available](04_search_and_decisions.ipynb) |
-| 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | Planned |
+| 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | [Available](05_neural_guided_program_search.ipynb) |
 | 06 | Structure and execution embeddings | Representing trees, graphs and program behavior | Planned |
 | 07 | Learning reusable abstractions | Library learning and reusable program components | Planned |
 | 08 | Adaptation and compositional generalization | New task adaptation, evaluation splits and failure analysis | Planned |
@@ -124,3 +124,20 @@ separates textbook UCT from persistent cross-task Grammar-UCT and motivates
 neural-guided search in lesson 05. The notebook includes nine exercises,
 worked solutions and primary references. No new dependencies are required.
 Run using `04_search_and_decisions.ipynb` in the execution command above.
+
+## Lesson 05: neural-guided program search
+
+Learn a task-conditioned policy over next grammar actions from synthetic solved
+program traces; implement an explicit NumPy neural network and check its
+softmax-cross-entropy gradients. Separately train a value network on a precisely
+defined random-rollout success-probability target. Hold out whole task identities
+before creating policy/value rows.
+
+Integrate learned policy priors into a transparent PUCT tree search. Compare UCT
+with uniform rollout, PUCT with uniform rollout, and PUCT with learned rollout
+using equal complete-program execution budgets. Diagnose rare-value regression
+failures, imitation/selection bias, policy miscalibration, and distribution shift.
+The notebook includes 10 exercises with worked solutions, a direct mapping to
+Grammar-UCT's operation/source decisions, and a bridge to lesson 06 embeddings.
+No new dependencies. Use `05_neural_guided_program_search.ipynb` in the README's
+notebook execution example.
