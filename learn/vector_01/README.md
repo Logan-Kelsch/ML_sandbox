@@ -1,7 +1,7 @@
 # Vector 01: from gradients to neural-guided program search
 
 A visual, from-scratch learning sequence. Each numbered prompt corresponds to one
-notebook and a separate pull request. Lessons 00–07 are available.
+notebook and a separate pull request. All lessons 00–08 are available.
 
 | Prompt | Lesson | Build or investigate | Status |
 |---|---|---|---|
@@ -13,7 +13,7 @@ notebook and a separate pull request. Lessons 00–07 are available.
 | 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | [Available](05_neural_guided_program_search.ipynb) |
 | 06 | Structure and execution embeddings | Representing trees, graphs and program behavior | [Available](06_structure_execution_embeddings.ipynb) |
 | 07 | Learning reusable abstractions | Library learning and reusable program components | [Available](07_learning_reusable_abstractions.ipynb) |
-| 08 | Adaptation and compositional generalization | New task adaptation, evaluation splits and failure analysis | Planned |
+| 08 | Adaptation and compositional generalization | New task adaptation, evaluation splits and failure analysis | [Available](08_adaptation_and_compositional_generalization.ipynb) |
 
 The main project is neural-guided program search. A small equation learner comes
 first to make differentiable structure concrete; embeddings later become a
@@ -181,3 +181,30 @@ operations, source components and cached representations.
 
 Run `07_learning_reusable_abstractions.ipynb` using the README's normal Jupyter
 setup; no new dependencies are required.
+
+## Lesson 08: adaptation and compositional generalization
+
+Capstone for vector_01. Create a small exact-execution grammar of seven-bit
+Boolean-grid transformations and group all 1,365 programs by their behavior
+across the complete 128-input toy domain. Partition target transformations by
+semantic identity and evaluate four distinct task-family shifts: unseen short
+functions, a withheld legal operator transition, longer unseen compositions,
+and their joint shift.
+
+Train a smoothed Markov grammar prior only on short training solutions. Adapt it
+using a **separate labeled support set** of six solved tasks. Compare uniform
+candidate enumeration, the trained prior and the adapted prior at the same
+complete candidate-execution budget. Record correct function discovery versus
+mere demonstration agreement, candidate-execution curves, negative transfer,
+support-count sensitivity, and ambiguity from too few input/output examples.
+
+The notebook also shows a grammar-expressivity failure from a missing primitive,
+plots descriptive uncertainty intervals, includes 12 exercises with worked
+solutions, and proposes an evaluation protocol for a task-conditioned neural
+Grammar-UCT search system. This toy benchmark does not establish ARC accuracy.
+No new dependencies are required.
+
+**Sequence complete:** lessons 00–08 now form a continuous curriculum from
+calculus and neural networks through symbolic hypotheses, search, neural
+policies, structural embeddings, reusable libraries, and adaptation. The next
+step is to apply the pieces in a reproducible grammar-search experiment.
