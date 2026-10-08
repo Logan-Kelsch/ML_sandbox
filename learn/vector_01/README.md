@@ -1,7 +1,7 @@
 # Vector 01: from gradients to neural-guided program search
 
 A visual, from-scratch learning sequence. Each numbered prompt corresponds to one
-notebook and a separate pull request. Lessons 00–03 are available.
+notebook and a separate pull request. Lessons 00–04 are available.
 
 | Prompt | Lesson | Build or investigate | Status |
 |---|---|---|---|
@@ -9,7 +9,7 @@ notebook and a separate pull request. Lessons 00–03 are available.
 | 01 | Equation learners (EQL) | Differentiable mathematical operators, sparsity and expression recovery | [Available](01_equation_learners.ipynb) |
 | 02 | Programs as hypotheses | Typed grammars, a small interpreter and inverse semantics | [Available](02_programs_as_hypotheses.ipynb) |
 | 03 | Choosing hypotheses | Bayesian reasoning, minimum description length and uncertainty | [Available](03_choosing_hypotheses.ipynb) |
-| 04 | Search and decisions | Bandits, UCT and Monte Carlo tree search | Planned |
+| 04 | Search and decisions | Bandits, UCB1, UCT and Monte Carlo tree search | [Available](04_search_and_decisions.ipynb) |
 | 05 | Neural-guided program search | Policy/value predictions, imitation and a guided search loop | Planned |
 | 06 | Structure and execution embeddings | Representing trees, graphs and program behavior | Planned |
 | 07 | Learning reusable abstractions | Library learning and reusable program components | Planned |
@@ -108,3 +108,19 @@ probability calibration under a matched synthetic generator. It includes eight
 exercises with solutions and emphasizes the limits of inference over a restricted
 candidate set. Allow 75–120 minutes; no additional dependencies are required.
 Use `03_choosing_hypotheses.ipynb` in the execution command above.
+
+## Lesson 04: search and decisions
+
+Build an independent multi-armed bandit and compare uniform, greedy and UCB1
+allocation across reproducible trials. Visualize the exploration bonus,
+pseudo-regret, and sensitivity to its coefficient. Then implement a typed
+prefix-tree MCTS with selection, expansion, simulation and backpropagation.
+
+The synthetic three-step program grammar is small enough to enumerate
+exhaustively for correctness checks. Compare exact, shaped and prefix-based
+rewards, display evolving root visits and distinct-program coverage, and
+examine unequal execution costs and discounted lineage credit. A final section
+separates textbook UCT from persistent cross-task Grammar-UCT and motivates
+neural-guided search in lesson 05. The notebook includes nine exercises,
+worked solutions and primary references. No new dependencies are required.
+Run using `04_search_and_decisions.ipynb` in the execution command above.
