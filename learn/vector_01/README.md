@@ -113,7 +113,7 @@ Use `03_choosing_hypotheses.ipynb` in the execution command above.
 
 Build an independent multi-armed bandit and compare uniform, greedy and UCB1
 allocation across reproducible trials. Visualize the exploration bonus,
-pseudo-regret, and sensitivity to its coefficient. Then implement a typed
+pseudo-regret, and sensitivity to its coefficient. Then implement a token
 prefix-tree MCTS with selection, expansion, simulation and backpropagation.
 
 The synthetic three-step program grammar is small enough to enumerate
@@ -208,3 +208,9 @@ No new dependencies are required.
 calculus and neural networks through symbolic hypotheses, search, neural
 policies, structural embeddings, reusable libraries, and adaptation. The next
 step is to apply the pieces in a reproducible grammar-search experiment.
+
+## Review and next project
+
+Lessons 04–08 now include executed outputs and additional diagnostics. See
+[NEXT_PROJECT.md](NEXT_PROJECT.md) for the implementation boundaries, verification
+record, and a staged execution-guided synthesis project that connects the lessons.
